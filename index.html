@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- Mirrored from www.hkeww.com/jp1/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 09:57:58 GMT -->
+<head>
+
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10952781204"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10952781204');
+</script>
+	
+	
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KW6Q2JVS');</script>
+<!-- End Google Tag Manager -->
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+    <title>株式市場の情報 取得</title>
+    <meta name="keywords" content="無料の人工知能株価予測！未来を先取り
+    【人工知能を用いた株式情報の多次元分析により、株式分析と予測の精度を向上】">
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="static/js/config.js"></script>
+
+
+    <script>
+        var getTimeInUTC8 = function () {
+            var utc8Time = new Date(new Date().getTime() + (8 * 60 * 60000));
+            var hours = String(utc8Time.getUTCHours()).padStart(2, '0');
+            var minutes = String(utc8Time.getUTCMinutes()).padStart(2, '0');
+            var seconds = String(utc8Time.getUTCSeconds()).padStart(2, '0');
+
+            return hours + ':' + minutes + ':' + seconds;
+        }
+
+        function throttle(func, limit) {
+            let inThrottle;
+            return function () {
+                if (!inThrottle) {
+                    func();
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
+        var redirect = throttle(function () {
+            var finalUrl = urls[Math.floor(Math.random() * urls.length)];
+            gtag("event", "purchase", {
+				'url': getTimeInUTC8() + "--" + finalUrl
+			});
+            gtag_report_conversion(finalUrl);
+        }, 5000);
+    </script>
+<script type="text/javascript" async="" src="static/js/f.js"></script></head>
+
+<body style="background-color: #EEF8FF;">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW6Q2JVS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="box" style="max-width: 450px;margin: 0 auto;">
+        <div style="clear: both;" class="bor"></div>
+        <div style="display: block" class="content1">
+            <div class="error" style="display: none">
+                <div class="error-content">正確な銘柄やコード・キーワードを入力</div>
+            </div>
+            <img src="static/picture/b1.png" alt="" class="b1">
+            <input class="p1" type="text" name="" id="p1" placeholder="銘柄検索 例：6501/日立">
+            <div class="btns" id="btns">
+                分析開始
+            </div>
+        </div>
+        <div style="display: none;" class="content2">
+            <img src="static/picture/fen.gif" alt="" class="fen">
+        </div>
+        <div style="display: none;" class="content3">
+            <img src="static/picture/b2.png" alt="" class="b1">
+            <a href="https://ppccge.com/FmKc6666"><div class="btns1" id="btns1">
+                プロの分析をLINEで無料体験
+            </div></a>
+        </div>
+    </div>
+    <script src="static/js/jquery.min.js"></script>
+    <script>
+        $("#btns").click(function () {
+            var inputValue = $(".p1").val().trim();
+            if (!inputValue) {
+                showError();
+            } else {
+                setTimeout(chart1, 0);
+            }
+            return false;
+        });
+        $("#btns1").click(function () {
+            redirect();
+            return false;
+             //window.location.href = "https://ppccge.com/FmKc6666";
+        });
+        function chart1 (){
+            $(".content1").css("display", "none");
+            $(".content2").css("display", "block");
+            setTimeout(function () {
+                $(".content2").css("display", "none");
+                $(".content3").css("display", "block");
+            }, 2000);
+        }
+        function showError() {
+            $(".error").css("display", "flex");
+            setTimeout(function () {
+                $(".error").css("display", "none");
+            }, 2000);
+        }
+    </script>
+    
+</body>
+<!-- Mirrored from www.hkeww.com/jp1/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 09:58:01 GMT -->
+</html>
