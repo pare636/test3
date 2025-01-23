@@ -53,24 +53,9 @@
       }
     }
 
-    .box {
-      max-width: 450px;
-      margin: 0 auto;
-      text-align: center; /* จัดข้อความทั้งหมดใน box ให้อยู่ตรงกลาง */
-      display: flex; /* ใช้ flexbox เพื่อจัดวาง element */
-      flex-direction: column; /* จัด element เรียงกันในแนวตั้ง */
-      align-items: center; /* จัด element ให้อยู่ตรงกลางในแนวนอน */
-      justify-content: center; /* จัด element ให้อยู่ตรงกลางในแนวตั้ง */
-      height: 100vh; /* กำหนดความสูงของ box ให้เต็มความสูงของ viewport */
-    }
-
-    .content1 {
-      padding: 20px;
-    }
-
-    .blinking,
-    .scaling {
-      margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    .btns {
+      /* ... other styles ... */
+      cursor: pointer;
     }
   </style>
 </head>
@@ -79,9 +64,9 @@
 
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW6Q2JVS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <div class="box">
+  <div class="box" style="max-width: 450px;margin: 0 auto;">
     <div style="clear: both;" class="bor"></div>
-    <div class="content1">
+    <div style="display: block" class="content1">
       <div class="error" style="display: none">
         <div class="error-content">正確な銘柄やコード・キーワードを入力</div>
       </div>
