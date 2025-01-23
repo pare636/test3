@@ -10,9 +10,9 @@
     height: 100vh; /* ใช้ความสูงเต็มหน้าจอ */
     width: 100%;
     background-image: url('../image/banna.gif'); /* รูปภาพพื้นหลัง */
-    background-size: contain; /* ให้รูปแสดงเต็มโดยรักษาสัดส่วน */
-    background-position: top; /* จัดตำแหน่งให้อยู่ด้านบน */
-    background-repeat: no-repeat; /* ไม่ให้รูปซ้ำ */
+    background-size: cover; /* แสดงภาพเต็มพื้นที่โดยไม่ถูกตัด */
+    background-position: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,28 +23,29 @@
 /* รูปภาพพื้นหลัง */
 .bor {
     width: 100%;
-    height: auto; /* ให้ขนาดปรับตามเนื้อหา */
+    height: auto; /* ปรับขนาดตามภาพ */
     margin-bottom: 0; /* ลดช่องว่างด้านล่าง */
 }
 
 /* รูปภาพ b1.png */
 .b1 {
     display: block;
-    width: auto; /* ให้ปรับขนาดตามอัตราส่วน */
-    max-width: 100%; /* ไม่ให้เกินขนาดกล่อง */
+    width: auto; /* คงอัตราส่วน */
+    max-width: 100%; /* ไม่ให้เกินขอบของกล่อง */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
     margin-top: 0; /* ลดช่องว่างด้านบน */
     margin-bottom: 0; /* ลดช่องว่างด้านล่าง */
 }
 
 /* ช่องข้อความค้นหา */
 .p1 {
-    width: 100%;
+    width: 80%; /* ลดความกว้างให้อยู่ในพื้นที่ */
     height: 4.5rem;
     border-radius: 2rem;
     background-color: #D9E5FE;
     border: 2px solid #4E93EA;
-    margin-top: 12px;
-    padding: 0 2rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
     text-align: center;
 }
 
@@ -54,6 +55,7 @@
     line-height: 1.5; /* จัดระยะห่างระหว่างบรรทัด */
     animation: blink 1s infinite;
     text-align: center;
+    font-size: 1rem; /* ปรับขนาดตัวอักษร */
 }
 
 @keyframes blink {
@@ -65,7 +67,7 @@
 /* ปุ่ม */
 .btns {
     margin-top: 0.5rem; /* ลดช่องว่างด้านบนปุ่ม */
-    width: 100%;
+    width: 80%; /* ลดความกว้างให้อยู่ในพื้นที่ */
     height: 4.5rem;
     background-color: #4fc866;
     border-radius: 2rem;
@@ -77,19 +79,13 @@
 
 /* ปรับขนาดสำหรับหน้าจอเล็ก */
 @media (max-width: 400px) {
-    .bor {
-        height: auto;
+    .p1, .btns {
+        width: 90%; /* ขยายให้เต็มพื้นที่มากขึ้น */
     }
 }
 
 @media (max-width: 360px) {
-    .bor {
-        height: auto;
-    }
-}
-
-@media (max-width: 300px) {
-    .bor {
-        height: auto;
+    .p1, .btns {
+        width: 95%; /* ปรับสำหรับหน้าจอที่เล็กที่สุด */
     }
 }
