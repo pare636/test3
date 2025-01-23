@@ -2,32 +2,38 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* กล่องทั้งหมด */
 .box {
     height: 100%;
     width: 100%;
-    background-image: url('../image/banna.gif'); /* นำกลับมา */
+    background-image: url('../image/banna.gif');
     background-size: cover;
     background-position: center;
-    padding: 3rem 4rem;
+    padding: 0; /* ลบ padding */
+    margin: 0; /* ลบ margin */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start; /* จัดให้อยู่ด้านบน */
 }
 
 /* ช่องเว้นว่าง */
 .bor {
     width: 100%;
     height: 320px;
-    margin-bottom: 20px;
+    margin: 0; /* ลบ margin */
+    padding: 0; /* ลบ padding */
 }
 
 /* รูปภาพ */
 .b1 {
     display: block;
     width: 100%;
+    margin: 0; /* ลบ margin */
+    padding: 0; /* ลบ padding */
 }
 
 /* ช่องข้อความค้นหา */
