@@ -1,129 +1,86 @@
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* กล่องทั้งหมด */
 .box {
-    display: block;
-    overflow: hidden;
     height: 100%;
     width: 100%;
-    background-image: url('../image/banna.gif');
-    background-size: cover;
-    padding: 3rem 4rem;
+    background-color: #EEF8FF; /* ใช้สีพื้นแทนภาพ */
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
 }
 
+/* ช่องเว้นว่าง */
 .bor {
     width: 100%;
     height: 320px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
+/* รูปภาพ */
 .b1 {
     display: block;
     width: 100%;
-    overflow: hidden;
 }
 
-.fen {
-    display: block;
-    width: 100%;
-}
-
+/* ช่องข้อความค้นหา */
 .p1 {
     width: 100%;
     height: 4.5rem;
     border-radius: 2rem;
     background-color: #D9E5FE;
-    border-color: #4E93EA !important;
+    border: 2px solid #4E93EA;
     margin-top: 12px;
-    padding: 0rem 2rem;
+    padding: 0 2rem;
     text-align: center;
 }
 
-.btns {
-    margin-top: 4rem;
-    width: 100%;
-    height: 4.5rem;
-    display: block;
-    background-color: #4fc866;
-    border-radius: 2rem;
+/* ข้อความกระพริบ */
+.blinking {
+    margin-bottom: 1rem; /* ลดช่องว่างใต้ข้อความ */
+    animation: blink 1s infinite;
     text-align: center;
-    line-height: 4.5rem;
-    color: #ffffff;
-    cursor: pointer;
 }
 
-@keyframes moveButton {
-    0% {
-        transform: scale(1);
-    }
-
+@keyframes blink {
     50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
+        opacity: 0;
     }
 }
 
-.btns1 {
-    margin-top: 4rem;
+/* ปุ่ม */
+.btns {
+    margin-top: 1rem; /* ลดช่องว่างด้านบนปุ่ม */
     width: 100%;
     height: 4.5rem;
-    display: block;
     background-color: #4fc866;
     border-radius: 2rem;
     text-align: center;
     line-height: 4.5rem;
     color: #ffffff;
     cursor: pointer;
-    animation-name: moveButton;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
 }
 
-.error {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    display: flex;
-    z-index: 9999999;
-    align-items: center;
-    justify-content: center;
-}
-
-.error-content {
-    padding: 20px;
-    line-height: 18px;
-    word-break: break-all;
-    overflow: hidden;
-    font-size: 18px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.8);
-}
-
+/* ปรับความสูงของ .bor สำหรับหน้าจอขนาดเล็ก */
 @media (max-width: 400px) {
-    .bor{
+    .bor {
         height: 270px;
     }
-    .box{
-        padding: 3rem 3rem;
-    }
 }
+
 @media (max-width: 360px) {
-    .bor{
+    .bor {
         height: 220px;
     }
 }
+
 @media (max-width: 300px) {
-    .bor{
+    .bor {
         height: 190px;
     }
 }
