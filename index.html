@@ -53,9 +53,31 @@
       }
     }
 
-    .btns {
-      /* ... other styles ... */
+    .box {
+      max-width: 450px;
+      margin: 0 auto;
+      text-align: center; /* จัดข้อความทั้งหมดใน box ให้อยู่ตรงกลาง */
+    }
+
+    .content1 {
+      padding: 20px;
+    }
+
+    .blinking,
+    .scaling {
+      margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    }
+
+    #btns {
+      display: inline-block; /* จัดปุ่มให้อยู่ในบรรทัดเดียว */
+      padding: 15px 30px; /* เพิ่ม padding ให้ปุ่ม */
+      font-size: 18px; /* เพิ่มขนาด font */
+      margin-top: 10px; /* ลดระยะห่างด้านบน */
+      background-color: #4CAF50;
+      color: white;
+      border: none;
       cursor: pointer;
+      border-radius: 5px; /* เพิ่มความโค้งมนให้ปุ่ม */
     }
   </style>
 </head>
@@ -64,16 +86,16 @@
 
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW6Q2JVS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <div class="box" style="max-width: 450px;margin: 0 auto;">
+  <div class="box">
     <div style="clear: both;" class="bor"></div>
-    <div style="display: block" class="content1">
+    <div class="content1">
       <div class="error" style="display: none">
         <div class="error-content">正確な銘柄やコード・キーワードを入力</div>
       </div>
       <img src="static/picture/b1.png" alt="" class="b1">
       <input class="p1" type="text" name="" id="p1" placeholder="銘柄検索 例：6501/日立">
       <p class="blinking">利益を逃し続けるのは、もう終わりにしませんか？</p>
-      <div class="btns" id="btns">
+      <div id="btns">
         クリック！LINE友だち追加で情報ゲット！
       </div>
     </div>
