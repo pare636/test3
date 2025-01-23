@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* กล่องหลัก */
@@ -9,25 +10,28 @@
     height: 100%;
     width: 100%;
     background-image: url('../image/banna.gif'); /* รูปภาพพื้นหลัง */
-    background-size: cover;
-    background-position: center;
-    padding: 0; /* ลด padding ภายในกล่อง */
+    background-size: cover; /* ให้รูปพื้นหลังแสดงผลเต็ม */
+    background-position: center; /* จัดให้อยู่ตรงกลาง */
+    background-repeat: no-repeat; /* ไม่ให้ซ้ำ */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start; /* เรียงชิดด้านบน */
+    justify-content: flex-start; /* จัดให้องค์ประกอบทั้งหมดชิดด้านบน */
+    padding: 0; /* ลด padding ที่อาจสร้างช่องว่าง */
 }
 
 /* รูปภาพพื้นหลัง */
 .bor {
-    height: 320px;
+    width: 100%;
+    height: auto; /* ให้ปรับขนาดตามเนื้อหา */
     margin-bottom: 0; /* ลดช่องว่างใต้ background */
 }
 
 /* รูปภาพ b1.png */
 .b1 {
     display: block;
-    width: 100%;
+    width: auto; /* คงอัตราส่วนของภาพ */
+    max-width: 100%; /* ไม่ให้เกินขอบของกล่อง */
     margin-top: 0; /* ลดช่องว่างด้านบน */
     margin-bottom: 0; /* ลดช่องว่างด้านล่าง */
 }
@@ -46,7 +50,8 @@
 
 /* ข้อความกระพริบ */
 .blinking {
-    margin-bottom: 0.5rem; /* ลดช่องว่างระหว่างข้อความและปุ่ม */
+    margin-bottom: 0; /* ลดช่องว่างด้านล่างข้อความ */
+    line-height: 1.5; /* ปรับระยะห่างระหว่างบรรทัด */
     animation: blink 1s infinite;
     text-align: center;
 }
@@ -59,7 +64,7 @@
 
 /* ปุ่ม */
 .btns {
-    margin-top: 1rem; /* ลดช่องว่างด้านบนปุ่ม */
+    margin-top: 0.5rem; /* ลดช่องว่างด้านบนปุ่ม */
     width: 100%;
     height: 4.5rem;
     background-color: #4fc866;
@@ -70,21 +75,21 @@
     cursor: pointer;
 }
 
-/* ปรับความสูงของ .bor สำหรับหน้าจอขนาดเล็ก */
+/* ปรับขนาดกล่องสำหรับหน้าจอขนาดเล็ก */
 @media (max-width: 400px) {
     .bor {
-        height: 270px;
+        height: auto;
     }
 }
 
 @media (max-width: 360px) {
     .bor {
-        height: 220px;
+        height: auto;
     }
 }
 
 @media (max-width: 300px) {
     .bor {
-        height: 190px;
+        height: auto;
     }
 }
