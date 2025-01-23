@@ -7,39 +7,30 @@
 
 /* กล่องหลัก */
 .box {
-    height: 100vh; /* ใช้ความสูงเต็มหน้าจอ */
+    min-height: 100vh; /* ใช้ความสูงขั้นต่ำเต็มหน้าจอ */
     width: 100%;
     background-image: url('../image/banna.gif'); /* รูปภาพพื้นหลัง */
-    background-size: cover; /* แสดงภาพเต็มพื้นที่โดยไม่ถูกตัด */
-    background-position: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+    background-size: contain; /* แสดงภาพเต็มโดยคงอัตราส่วน */
+    background-position: top; /* จัดตำแหน่งให้อยู่ด้านบน */
     background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* ชิดด้านบน */
-    padding: 0; /* ลด padding ภายใน */
-}
-
-/* รูปภาพพื้นหลัง */
-.bor {
-    width: 100%;
-    height: auto; /* ปรับขนาดตามภาพ */
-    margin-bottom: 0; /* ลดช่องว่างด้านล่าง */
+    padding: 1rem 0; /* เพิ่มระยะห่างรอบๆ */
 }
 
 /* รูปภาพ b1.png */
 .b1 {
     display: block;
-    width: auto; /* คงอัตราส่วน */
-    max-width: 100%; /* ไม่ให้เกินขอบของกล่อง */
-    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
-    margin-top: 0; /* ลดช่องว่างด้านบน */
-    margin-bottom: 0; /* ลดช่องว่างด้านล่าง */
+    width: auto; /* คงอัตราส่วนของภาพ */
+    max-width: 90%; /* ไม่ให้เกินขนาดกล่อง */
+    margin: 1rem auto; /* จัดให้อยู่ตรงกลาง */
 }
 
 /* ช่องข้อความค้นหา */
 .p1 {
-    width: 80%; /* ลดความกว้างให้อยู่ในพื้นที่ */
+    width: 90%; /* ลดความกว้างให้อยู่ในพื้นที่ */
     height: 4.5rem;
     border-radius: 2rem;
     background-color: #D9E5FE;
@@ -51,6 +42,7 @@
 
 /* ข้อความกระพริบ */
 .blinking {
+    margin-top: 1rem; /* เพิ่มช่องว่างด้านบนข้อความ */
     margin-bottom: 0.5rem; /* ลดช่องว่างด้านล่างข้อความ */
     line-height: 1.5; /* จัดระยะห่างระหว่างบรรทัด */
     animation: blink 1s infinite;
@@ -67,7 +59,7 @@
 /* ปุ่ม */
 .btns {
     margin-top: 0.5rem; /* ลดช่องว่างด้านบนปุ่ม */
-    width: 80%; /* ลดความกว้างให้อยู่ในพื้นที่ */
+    width: 90%; /* ลดความกว้างให้อยู่ในพื้นที่ */
     height: 4.5rem;
     background-color: #4fc866;
     border-radius: 2rem;
@@ -80,12 +72,12 @@
 /* ปรับขนาดสำหรับหน้าจอเล็ก */
 @media (max-width: 400px) {
     .p1, .btns {
-        width: 90%; /* ขยายให้เต็มพื้นที่มากขึ้น */
+        width: 95%; /* ขยายให้เต็มพื้นที่มากขึ้น */
     }
 }
 
 @media (max-width: 360px) {
     .p1, .btns {
-        width: 95%; /* ปรับสำหรับหน้าจอที่เล็กที่สุด */
+        width: 98%; /* ปรับสำหรับหน้าจอที่เล็กที่สุด */
     }
 }
