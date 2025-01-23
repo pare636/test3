@@ -8,8 +8,10 @@
 .box {
     height: 100%;
     width: 100%;
-    background-image: url('../image/banna.gif');
-    padding: 3rem;
+    background-image: url('../image/banna.gif'); /* นำกลับมา */
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
