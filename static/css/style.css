@@ -4,30 +4,32 @@
     padding: 0;
 }
 
-/* กล่องทั้งหมด */
+/* กล่องหลัก */
 .box {
     height: 100%;
     width: 100%;
-    background-image: url('../image/banna.gif'); /* นำกลับมา */
+    background-image: url('../image/banna.gif'); /* รูปภาพพื้นหลัง */
     background-size: cover;
     background-position: center;
-    padding: 3rem 4rem;
+    padding: 0; /* ลด padding ภายในกล่อง */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start; /* เรียงชิดด้านบน */
 }
 
-/* ช่องเว้นว่าง */
+/* รูปภาพพื้นหลัง */
 .bor {
-    width: 100%;
     height: 320px;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* ลดช่องว่างใต้ background */
 }
 
-/* รูปภาพ */
+/* รูปภาพ b1.png */
 .b1 {
     display: block;
     width: 100%;
+    margin-top: 0; /* ลดช่องว่างด้านบน */
+    margin-bottom: 0; /* ลดช่องว่างด้านล่าง */
 }
 
 /* ช่องข้อความค้นหา */
@@ -44,7 +46,7 @@
 
 /* ข้อความกระพริบ */
 .blinking {
-    margin-bottom: 1rem; /* ลดช่องว่างใต้ข้อความ */
+    margin-bottom: 0.5rem; /* ลดช่องว่างระหว่างข้อความและปุ่ม */
     animation: blink 1s infinite;
     text-align: center;
 }
