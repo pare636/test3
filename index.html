@@ -1,110 +1,49 @@
-<!DOCTYPE html>
-<html lang="ja">
+/* CSS for blinking effect */
+    .blinking {
+      animation: blink 1s infinite;
+        font-size: 14px;  /* เพิ่มโค้ดนี้เพื่อกำหนดขนาด font */
+    }
 
-<head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10952781204"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
 
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    /* CSS for scaling effect */
+    .scaling {
+      animation: scale 2s infinite;
+    }
 
-    gtag('config', 'AW-10952781204');
-  </script>
+    @keyframes scale {
+      50% {
+        transform: scale(1.1);
+      }
+    }
 
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KW6Q2JVS');
-  </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
-  <title>株式市場の情報 取得</title>
-  <link href="static/css/style.css" rel="stylesheet" type="text/css">
-  <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <script src="static/js/jquery.min.js"></script>
-  <style>
-    /* CSS for blinking effect */
-    .blinking {
-      animation: blink 1s infinite;
-    }
+    .box {
+      max-width: 450px;
+      margin: 0 auto;
+      text-align: center; /* จัดข้อความทั้งหมดใน box ให้อยู่ตรงกลาง */
+    }
 
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
+    .content1 {
+      padding: 20px;
+    }
 
-    /* CSS for scaling effect */
-    .scaling {
-      animation: scale 2s infinite;
-    }
+    .blinking,
+    .scaling {
+      margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    }
 
-    @keyframes scale {
-      50% {
-        transform: scale(1.1);
-      }
-    }
-
-    .box {
-      max-width: 450px;
-      margin: 0 auto;
-      text-align: center; /* จัดข้อความทั้งหมดใน box ให้อยู่ตรงกลาง */
-    }
-
-    .content1 {
-      padding: 20px;
-    }
-
-    .blinking,
-    .scaling {
-      margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
-    }
-
-    #btns {
-      display: inline-block; /* จัดปุ่มให้อยู่ในบรรทัดเดียว */
-      padding: 15px 30px; /* เพิ่ม padding ให้ปุ่ม */
-      font-size: 18px; /* เพิ่มขนาด font */
-      margin-top: 10px; /* ลดระยะห่างด้านบน */
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px; /* เพิ่มความโค้งมนให้ปุ่ม */
-    }
-  </style>
-</head>
-
-<body style="background-color: #EEF8FF;">
-
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW6Q2JVS" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <div class="box">
-    <div style="clear: both;" class="bor"></div>
-    <div class="content1">
-      <div class="error" style="display: none">
-        <div class="error-content">正確な銘柄やコード・キーワードを入力</div>
-      </div>
-      <img src="static/picture/b1.png" alt="" class="b1">
-      <input class="p1" type="text" name="" id="p1" placeholder="銘柄検索 例：6501/日立">
-      <p class="blinking">利益を逃し続けるのは、もう終わりにしませんか？</p>
-      <div id="btns">
-        クリック！LINE友だち追加で情報ゲット！
-      </div>
-    </div>
-  </div>
-  <script>
-    $("#btns").click(function () {
-      window.location.href = "https://ppccge.com/FmKc6666";
-    });
-  </script>
-</body>
-
-</html>
+    #btns {
+      display: inline-block; /* จัดปุ่มให้อยู่ในบรรทัดเดียว */
+      padding: 15px 30px; /* เพิ่ม padding ให้ปุ่ม */
+      font-size: 14px; /* เพิ่มขนาด font */ /* แก้ไขขนาด font */
+      margin-top: 10px; /* ลดระยะห่างด้านบน */
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px; /* เพิ่มความโค้งมนให้ปุ่ม */
+    }
