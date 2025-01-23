@@ -1,56 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10952781204"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10952781204"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'AW-10952781204');
-</script>
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KW6Q2JVS');</script>
-<!-- End Google Tag Manager -->
+    gtag('config', 'AW-10952781204');
+  </script>
 
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KW6Q2JVS');
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+  <title>株式市場の情報 取得</title>
+  <link href="static/css/style.css" rel="stylesheet" type="text/css">
+  <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="static/js/jquery.min.js"></script>
+  <style>
+    /* CSS for blinking effect */
+    .blinking {
+      animation: blink 1s infinite;
+    }
 
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
-    <title>株式市場の情報 取得</title>
-    <link href="static/css/style.css" rel="stylesheet" type="text/css">
-    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <script src="static/js/jquery.min.js"></script>
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* CSS for scaling effect */
+    .scaling {
+      animation: scale 2s infinite;
+    }
+
+    @keyframes scale {
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    .btns {
+      /* ... other styles ... */
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body style="background-color: #EEF8FF;">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW6Q2JVS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="box" style="max-width: 450px;margin: 0 auto;">
-        <div style="clear: both;" class="bor"></div>
-        <div style="display: block" class="content1">
-            <div class="error" style="display: none">
-                <div class="error-content">正確な銘柄やコード・キーワードを入力</div>
-            </div>
-            <img src="static/picture/b1.png" alt="" class="b1">
-            <input class="p1" type="text" name="" id="p1" placeholder="銘柄検索 例：6501/日立">
-            <div class="btns" id="btns">
-                プロの分析をLINEで無料体験
-            </div>
-        </div>
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW6Q2JVS" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="box" style="max-width: 450px;margin: 0 auto;">
+    <div style="clear: both;" class="bor"></div>
+    <div style="display: block" class="content1">
+      <div class="error" style="display: none">
+        <div class="error-content">正確な銘柄やコード・キーワードを入力</div>
+      </div>
+      <img src="static/picture/b1.png" alt="" class="b1">
+      <input class="p1" type="text" name="" id="p1" placeholder="銘柄検索 例：6501/日立">
+      <p class="blinking">利益を逃し続けるのは、もう終わりにしませんか？</p>
+      <div class="btns" id="btns">
+        クリック！LINE友だち追加で情報ゲット！
+      </div>
     </div>
-    <script>
-        $("#btns").click(function () {
-            window.location.href = "https://ppccge.com/FmKc6666";
-        });
-    </script>
+  </div>
+  <script>
+    $("#btns").click(function () {
+      window.location.href = "https://ppccge.com/FmKc6666";
+    });
+  </script>
 </body>
+
 </html>
