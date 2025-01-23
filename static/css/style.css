@@ -1,94 +1,101 @@
-/* Reset styles */
+/* CSS from your provided code */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* กล่องทั้งหมด */
 .box {
-    height: 100%;
-    width: 100%;
-    background-image: url('../image/banna.gif');
-    background-size: cover;
-    background-position: center;
-    padding: 0; /* ลบ padding */
-    margin: 0; /* ลบ margin */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* จัดให้อยู่ด้านบน */
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-image: url('../image/banna.gif');
+  background-size: cover;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Added styles for centering */
+  align-items: center;
+  justify-content: center;
 }
 
-/* ช่องเว้นว่าง */
 .bor {
-    width: 100%;
-    height: 320px;
-    margin: 0; /* ลบ margin */
-    padding: 0; /* ลบ padding */
+  width: 100%;
+  height: 320px;
+  margin-bottom: 20px;
 }
 
-/* รูปภาพ */
 .b1 {
-    display: block;
-    width: 100%;
-    margin: 0; /* ลบ margin */
-    padding: 0; /* ลบ padding */
+  display: block;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* ช่องข้อความค้นหา */
 .p1 {
-    width: 100%;
-    height: 4.5rem;
-    border-radius: 2rem;
-    background-color: #D9E5FE;
-    border: 2px solid #4E93EA;
-    margin-top: 12px;
-    padding: 0 2rem;
-    text-align: center;
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 2rem;
+  background-color: #D9E5FE;
+  border-color: #4E93EA !important;
+  margin-top: 12px;
+  padding: 0rem 2rem;
+  text-align: center;
 }
 
-/* ข้อความกระพริบ */
-.blinking {
-    margin-bottom: 1rem; /* ลดช่องว่างใต้ข้อความ */
-    animation: blink 1s infinite;
-    text-align: center;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-/* ปุ่ม */
 .btns {
-    margin-top: 1rem; /* ลดช่องว่างด้านบนปุ่ม */
-    width: 100%;
-    height: 4.5rem;
-    background-color: #4fc866;
-    border-radius: 2rem;
-    text-align: center;
-    line-height: 4.5rem;
-    color: #ffffff;
-    cursor: pointer;
+  margin-top: 4rem;
+  width: 100%;
+  height: 4.5rem;
+  display: block;
+  background-color: #4fc866;
+  border-radius: 2rem;
+  text-align: center;
+  line-height: 4.5rem;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-/* ปรับความสูงของ .bor สำหรับหน้าจอขนาดเล็ก */
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  z-index: 9999999;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-content {
+  padding: 20px;
+  line-height: 18px;
+  word-break: break-all;
+  overflow: hidden;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+}
+
 @media (max-width: 400px) {
-    .bor {
-        height: 270px;
-    }
+  .bor {
+    height: 270px;
+  }
+
+  .box {
+    padding: 3rem 3rem;
+  }
 }
 
 @media (max-width: 360px) {
-    .bor {
-        height: 220px;
-    }
+  .bor {
+    height: 220px;
+  }
 }
 
 @media (max-width: 300px) {
-    .bor {
-        height: 190px;
-    }
+  .bor {
+    height: 190px;
+  }
 }
